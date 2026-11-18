@@ -1,0 +1,256 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f5;
+    color: #263b30;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: white;
+    padding: 25px 0;
+    border-bottom: 2px solid #e1eae2;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #174d35;
+    font-size: 27px;
+}
+
+.logo span {
+    color: #48a36a;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #27834e;
+}
+
+.botao {
+    background-color: #27834e;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* INÍCIO */
+
+.hero {
+    background-color: #e8f2e9;
+    padding: 75px 0;
+}
+
+.hero-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: #174d35;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+    background-color: white;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+.formulario h2 {
+    text-align: center;
+    color: #174d35;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 750px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input:focus,
+form select:focus {
+    outline: 2px solid #27834e;
+}
+
+form button {
+    display: block;
+    margin: 15px auto 0;
+    background-color: #27834e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #174d35;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #174d35;
+    margin-bottom: 18px;
+}
+
+.card p,
+.card li {
+    line-height: 1.6;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #174d35;
+    color: white;
+    padding: 40px 0;
+}
+
+footer h3,
+footer h4 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.direitos {
+    text-align: center;
+    margin-top: 35px;
+    border-top: 1px solid #ffffff40;
+    padding-top: 20px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+    .navegacao {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero-conteudo {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .informacoes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .informacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+}
